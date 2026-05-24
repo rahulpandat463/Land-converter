@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="hi-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bigha to Gaj Converter | भूमि मापन कनवर्टर | All Indian States Land Calculator</title>
+    <meta name="description" content="Free online land measurement converter for all Indian states. Convert Bigha to Gaj, Acre, Square Feet, Hectare instantly. UP, Rajasthan, Haryana, Punjab, Bihar, Delhi, Gujarat and 22 states supported. बीघा गज एकड़ हेक्टेयर कनवर्टर।" />
+    <meta name="keywords" content="bigha to gaj, bigha to acre, bigha to square feet, gaj to bigha, acre to bigha, land measurement converter india, bigha converter, जमीन नापने का तरीका, बीघा से गज, बीघा से एकड़, biswa to bigha, kanal to marla, hectare to acre, UP land converter, Rajasthan bigha, Bihar bigha to kattha" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Land Measurement Converter India" />
+    <meta name="theme-color" content="#2d6a4f" />
+    <link rel="canonical" href="https://landconvert.in/" />
+    <meta property="og:title" content="Bigha to Gaj Converter | Indian Land Measurement Tool" />
+    <meta property="og:description" content="Convert Bigha, Gaj, Acre, Hectare for all 22 Indian states instantly. Free tool." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://landconvert.in/" />
+    <meta property="og:locale" content="hi_IN" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #f0f6f0;
+        color: #1a3a2a;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+      header {
+        background: linear-gradient(135deg, #2d6a4f, #40916c);
+        color: #fff;
+        padding: 24px 20px;
+        border-radius: 12px;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+      header p {
+        font-size: 0.95rem;
+        opacity: 0.9;
+      }
+      .controls {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        align-items: stretch;
+      }
+      .controls select {
+        flex: 1;
+        min-width: 200px;
+        padding: 12px 16px;
+        border: 2px solid #c8e0d0;
+        border-radius: 8px;
+        font-size: 1rem;
+        background: #fff;
+        color: #1a3a2a;
+        cursor: pointer;
+        transition: border-color 0.2s;
+        -webkit-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%232d6a4f' stroke-width='2'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+      }
+      .controls select:focus {
+        border-color: #2d6a4f;
+        outline: none;
+      }
+      .btn {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 600;
+        transition:
+          background 0.2s,
+          transform 0.1s;
+        white-space: nowrap;
+      }
+      .btn:active {
+        transform: scale(0.97);
+      }
+      .btn-primary {
+        background: #2d6a4f;
+        color: #fff;
+      }
+      .btn-primary:hover {
+        background: #245a42;
+      }
+      .btn-secondary {
+        background: #e8f5ee;
+        color: #2d6a4f;
+        border: 2px solid #c8e0d0;
+      }
+      .btn-secondary:hover {
+        background: #d0e8d8;
+      }
+      .inputs-grid {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        margin-bottom: 24px;
+      }
+      .input-card {
+        background: #fff;
+        border: 2px solid #e0ece4;
+        border-radius: 10px;
+        padding: 12px 16px;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+      .input-card:focus-within {
+        border-color: #4a9e6b;
+        box-shadow: 0 0 0 3px rgba(74, 158, 107, 0.15);
+      }
+      .input-card label {
+        display: block;
+        font-size: 0.85rem;
+        color: #4a6b55;
+        margin-bottom: 4px;
+        font-weight: 500;
+      }
+      .input-card input {
+        width: 100%;
+        border: none;
+        font-size: 1.15rem;
+        padding: 6px 0;
+        outline: none;
+        background: transparent;
+        color: #1a3a2a;
+        font-weight: 600;
+      }
+      .input-card input::placeholder {
+        color: #b0c8b8;
+        font-weight: 400;
+      }
+      .input-card .unit-sub {
+        font-size: 0.75rem;
+        color: #8ba899;
+        margin-top: 2px;
+      }
+      .section-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #2d6a4f;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #c8e0d0;
+      }
+      .ref-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 32px;
+        border-radius: 10px;
+        border: 2px solid #e0ece4;
+      }
+      .ref-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+        background: #fff;
+        min-width: 420px;
+      }
+      .ref-table th,
+      .ref-table td {
+        padding: 8px 12px;
+        text-align: center;
+        white-space: nowrap;
+        border: 1px solid #e8f0ea;
+      }
+      .ref-table thead th {
+        background: #2d6a4f;
+        color: #fff;
+        font-weight: 600;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+      .ref-table thead th:first-child {
+        text-align: left;
+      }
+      .ref-table tbody th {
+        background: #f0f7f2;
+        color: #1a3a2a;
+        font-weight: 600;
+        text-align: left;
+        white-space: nowrap;
+      }
+      .ref-table tbody td {
+        color: #2d4a3a;
+      }
+      .ref-table tbody tr:nth-child(even) td {
+        background: #f8fbf9;
+      }
+      .ref-table tbody tr:hover td {
+        background: #e8f5ee;
+      }
+      .empty-state {
+        text-align: center;
+        padding: 48px 20px;
+        color: #8ba899;
+        background: #fff;
+        border-radius: 10px;
+        border: 2px dashed #c8e0d0;
+      }
+      .empty-state h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        color: #6b9a7b;
+      }
+      .empty-state p {
+        font-size: 0.9rem;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: #8ba899;
+        font-size: 0.8rem;
+      }
+      @media (max-width: 600px) {
+        .container {
+          padding: 12px;
+        }
+        header {
+          padding: 20px 16px;
+        }
+        header h1 {
+          font-size: 1.25rem;
+        }
+        .inputs-grid {
+          grid-template-columns: 1fr;
+        }
+        .controls {
+          flex-direction: column;
+        }
+        .controls select {
+          min-width: 0;
+        }
+        .btn {
+          text-align: center;
+        }
+        .ref-table {
+          font-size: 0.78rem;
+        }
+        .ref-table th,
+        .ref-table td {
+          padding: 6px 8px;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Indian Land Measurement Converter",
+  "alternateName": "भूमि मापन कनवर्टर",
+  "url": "https://landconvert.in/",
+  "description": "Free land measurement converter for all Indian states. Convert Bigha, Gaj, Acre, Hectare, Square Feet.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "inLanguage": ["hi", "en"],
+  "keywords": "bigha to gaj, land converter india, bigha acre converter"
+}
+</script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>भूमि मापन कनवर्टर</h1>
+        <p>Land Measurement Converter &mdash; Indian States</p>
+      </header>
+
+      <div class="controls">
+        <select id="stateSelect">
+          <option value="">-- राज्य चुनें / Select State --</option>
+        </select>
+        <button class="btn btn-secondary" id="clearBtn">
+          साफ़ करें / Clear All
+        </button>
+      </div>
+
+      <div id="inputsArea">
+        <div class="empty-state">
+          <h3>कोई राज्य चुना नहीं गया</h3>
+          <p>कृपया ऊपर से अपना राज्य चुनें | Please select your state above</p>
+        </div>
+      </div>
+
+      <div id="referenceArea"></div>
+
+      <section id="seo-content" style="background:#fff; border-radius:12px; padding:24px; margin-bottom:24px; border:2px solid #e0ece4;">
+        <h2 style="color:#2d6a4f; font-size:1.1rem; margin-bottom:16px;">भूमि मापन की मुख्य जानकारी | Key Land Conversions</h2>
+        <div style="display:grid; gap:12px; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); font-size:0.9rem; color:#2d4a3a;">
+          <div><strong>उत्तर प्रदेश (UP)</strong><br>1 बीघा = 20 बिस्वा = 1600 गज<br>1 बीघा = 0.33 एकड़ = 14400 वर्ग फुट</div>
+          <div><strong>राजस्थान (Rajasthan)</strong><br>1 बीघा (पक्का) = 27225 वर्ग फुट<br>1 बीघा (पक्का) = 0.625 एकड़</div>
+          <div><strong>हरियाणा (Haryana)</strong><br>1 एकड़ = 4 कनाल = 80 मरला<br>1 कनाल = 20 मरला</div>
+          <div><strong>पंजाब (Punjab)</strong><br>1 एकड़ = 4 कनाल = 80 मरला<br>1 बीघा = 2 कनाल</div>
+          <div><strong>बिहार (Bihar)</strong><br>1 बीघा = 20 कट्ठा = 400 धुर<br>1 बीघा = 27225 वर्ग फुट</div>
+          <div><strong>मध्य प्रदेश (MP)</strong><br>1 बीघा = 20 कट्ठा<br>1 बीघा = 12000 वर्ग फुट</div>
+          <div><strong>गुजरात (Gujarat)</strong><br>1 वीघा = 1936 वर्ग गज<br>1 वीघा = 0.4 एकड़</div>
+          <div><strong>सार्वभौमिक (Universal)</strong><br>1 एकड़ = 4840 वर्ग गज = 43560 वर्ग फुट<br>1 हेक्टेयर = 2.471 एकड़</div>
+        </div>
+        <div style="margin-top:16px; font-size:0.88rem; color:#4a6b55; line-height:1.8;">
+          <strong>अक्सर पूछे जाने वाले सवाल:</strong><br>
+          • 1 बीघा में कितने गज होते हैं? — उत्तर प्रदेश में 1 बीघा = 1600 गज (वर्ग गज)<br>
+          • 1 एकड़ में कितने बीघा होते हैं? — UP में 1 एकड़ = 3 बीघा (लगभग)<br>
+          • 1 हेक्टेयर में कितने बीघा? — UP में 1 हेक्टेयर = 7.41 बीघा<br>
+          • 1 बीघा में कितने वर्ग फुट? — UP में 14400, बिहार में 27225, राजस्थान में 27225
+        </div>
+      </section>
+
+      <footer>
+        भारतीय भूमि मापन कनवर्टर | Bigha Gaj Acre Hectare Calculator for UP, Rajasthan, Haryana, Punjab, Bihar, Delhi, Gujarat, Maharashtra and all Indian States | बीघा गज एकड़ हेक्टेयर कनवर्टर
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+
+        // ── Helper ──────────────────────────────────────────────
+        function fmt(n) {
+          if (n === null || n === undefined || isNaN(n)) return "0";
+          if (typeof n !== "number") return "0";
+          if (!isFinite(n)) return "0";
+          if (Math.abs(n) < 1e-12) return "0";
+          var s = n.toFixed(10);
+          s = s.replace(/\.?0+$/, "");
+          if (s === "" || s === "-") return "0";
+          return s;
+        }
+
+        function fmtShort(n) {
+          if (n === null || n === undefined || isNaN(n)) return "0";
+          if (typeof n !== "number") return "0";
+          if (!isFinite(n)) return "0";
+          if (Math.abs(n) < 1e-12) return "0";
+          var s = n.toFixed(6);
+          s = s.replace(/\.?0+$/, "");
+          if (s === "" || s === "-") return "0";
+          return s;
+        }
+
+        // ── State Data ──────────────────────────────────────────
+        var states = {
+          up: {
+            nameHi: "उत्तर प्रदेश",
+            nameEn: "Uttar Pradesh",
+            units: [
+              { id: "bigha", lh: "बीघा", le: "Bigha", toSqft: 14400 },
+              { id: "biswa", lh: "बिस्वा", le: "Biswa", toSqft: 720 },
+              {
+                id: "biswansi",
+                lh: "बिस्वांसी",
+                le: "Biswansi",
+                toSqft: 36,
+              },
+              { id: "gaj", lh: "गज", le: "Gaj (Sq Yard)", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          rajasthan: {
+            nameHi: "राजस्थान",
+            nameEn: "Rajasthan",
+            units: [
+              {
+                id: "bigha_pucca",
+                lh: "बीघा (पक्का)",
+                le: "Bigha (Pucca)",
+                toSqft: 27225,
+              },
+              {
+                id: "bigha_kuccha",
+                lh: "बीघा (कच्चा)",
+                le: "Bigha (Kuccha)",
+                toSqft: 13612.5,
+              },
+              {
+                id: "biswa_pucca",
+                lh: "बिस्वा (पक्का)",
+                le: "Biswa (Pucca)",
+                toSqft: 1361.25,
+              },
+              {
+                id: "biswansi_pucca",
+                lh: "बिस्वांसी (पक्का)",
+                le: "Biswansi (Pucca)",
+                toSqft: 68.0625,
+              },
+              {
+                id: "biswa_kuccha",
+                lh: "बिस्वा (कच्चा)",
+                le: "Biswa (Kuccha)",
+                toSqft: 680.625,
+              },
+              {
+                id: "biswansi_kuccha",
+                lh: "बिस्वांसी (कच्चा)",
+                le: "Biswansi (Kuccha)",
+                toSqft: 34.03125,
+              },
+              { id: "gaj", lh: "गज", le: "Gaj (Sq Yard)", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          haryana: {
+            nameHi: "हरियाणा",
+            nameEn: "Haryana",
+            units: [
+              { id: "bigha", lh: "बीघा", le: "Bigha (2 Kanal)", toSqft: 21780 },
+              { id: "kanal", lh: "कनाल", le: "Kanal", toSqft: 10890 },
+              { id: "marla", lh: "मरला", le: "Marla (Agricultural)", toSqft: 544.5 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          punjab: {
+            nameHi: "पंजाब",
+            nameEn: "Punjab",
+            units: [
+              { id: "bigha", lh: "बीघा", le: "Bigha (2 Kanal)", toSqft: 21780 },
+              { id: "kanal", lh: "कनाल", le: "Kanal", toSqft: 10890 },
+              { id: "marla", lh: "मरला", le: "Marla (Agricultural)", toSqft: 544.5 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          himachal: {
+            nameHi: "हिमाचल प्रदेश",
+            nameEn: "Himachal Pradesh",
+            units: [
+              { id: "bigha", lh: "बीघा", le: "Bigha", toSqft: 8712 },
+              { id: "biswa", lh: "बिस्वा", le: "Biswa", toSqft: 435.6 },
+              {
+                id: "biswansi",
+                lh: "बिस्वांसी",
+                le: "Biswansi",
+                toSqft: 21.78,
+              },
+              { id: "gaj", lh: "गज", le: "Gaj (Sq Yard)", toSqft: 9 },
+              { id: "kanal", lh: "कनाल", le: "Kanal", toSqft: 5445 },
+              { id: "marla", lh: "मरला", le: "Marla", toSqft: 272.25 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          mp: {
+            nameHi: "मध्य प्रदेश",
+            nameEn: "Madhya Pradesh",
+            units: [
+              { id: "bigha", lh: "बीघा", le: "Bigha", toSqft: 12000 },
+              { id: "katha", lh: "कट्ठा", le: "Katha", toSqft: 600 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          bihar: {
+            nameHi: "बिहार",
+            nameEn: "Bihar",
+            units: [
+              { id: "bigha", lh: "बीघा", le: "Bigha", toSqft: 27225 },
+              { id: "katha", lh: "कट्ठा", le: "Katha", toSqft: 1361.25 },
+              { id: "dhur", lh: "धुर", le: "Dhur", toSqft: 68.0625 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          jharkhand: {
+            nameHi: "झारखंड",
+            nameEn: "Jharkhand",
+            units: [
+              { id: "bigha", lh: "बीघा", le: "Bigha", toSqft: 27225 },
+              { id: "katha", lh: "कट्ठा", le: "Katha", toSqft: 1361.25 },
+              { id: "dhur", lh: "धुर", le: "Dhur", toSqft: 68.0625 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          "west-bengal": {
+            nameHi: "पश्चिम बंगाल",
+            nameEn: "West Bengal",
+            units: [
+              { id: "bigha", lh: "बीघा", le: "Bigha", toSqft: 14400 },
+              { id: "katha", lh: "कट्ठा", le: "Katha", toSqft: 720 },
+              { id: "chhatak", lh: "छटाक", le: "Chhatak", toSqft: 45 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          assam: {
+            nameHi: "असम",
+            nameEn: "Assam",
+            units: [
+              { id: "bigha", lh: "बीघा", le: "Bigha", toSqft: 14400 },
+              { id: "katha", lh: "कट्ठा", le: "Katha", toSqft: 720 },
+              { id: "lecha", lh: "लेचा", le: "Lecha", toSqft: 144 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          gujarat: {
+            nameHi: "गुजरात",
+            nameEn: "Gujarat",
+            units: [
+              { id: "vigha", lh: "वीघा", le: "Vigha", toSqft: 17424 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          maharashtra: {
+            nameHi: "महाराष्ट्र",
+            nameEn: "Maharashtra",
+            units: [
+              { id: "guntha", lh: "गुंठा", le: "Guntha", toSqft: 1089 },
+              {
+                id: "bigha",
+                lh: "बीघा",
+                le: "Bigha (2.5 Acre)",
+                toSqft: 108900,
+              },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          karnataka: {
+            nameHi: "कर्नाटक",
+            nameEn: "Karnataka",
+            units: [
+              { id: "guntha", lh: "गुंठा", le: "Guntha", toSqft: 1089 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          "tamil-nadu": {
+            nameHi: "तमिल नाडु",
+            nameEn: "Tamil Nadu",
+            units: [
+              { id: "cent", lh: "सेंट", le: "Cent", toSqft: 435.6 },
+              { id: "ground", lh: "ग्राउंड", le: "Ground", toSqft: 2400 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          kerala: {
+            nameHi: "केरल",
+            nameEn: "Kerala",
+            units: [
+              { id: "cent", lh: "सेंट", le: "Cent", toSqft: 435.6 },
+              { id: "are", lh: "आर", le: "Are", toSqft: 1076.39 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          "andhra-pradesh": {
+            nameHi: "आंध्र प्रदेश",
+            nameEn: "Andhra Pradesh",
+            units: [
+              { id: "cent", lh: "सेंट", le: "Cent", toSqft: 435.6 },
+              { id: "guntha", lh: "गुंठा", le: "Guntha", toSqft: 1089 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          telangana: {
+            nameHi: "तेलंगाना",
+            nameEn: "Telangana",
+            units: [
+              { id: "cent", lh: "सेंट", le: "Cent", toSqft: 435.6 },
+              { id: "guntha", lh: "गुंठा", le: "Guntha", toSqft: 1089 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          odisha: {
+            nameHi: "ओडिशा",
+            nameEn: "Odisha",
+            units: [
+              { id: "bigha", lh: "बीघा", le: "Bigha", toSqft: 14400 },
+              { id: "katha", lh: "कट्ठा", le: "Katha", toSqft: 720 },
+              { id: "kaani", lh: "कानी", le: "Kaani", toSqft: 10890 },
+              { id: "gontha", lh: "गोंठा", le: "Gontha", toSqft: 680.625 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              {
+                id: "sqmeter",
+                lh: "वर्ग मीटर",
+                le: "Sq Meter",
+                toSqft: 10.764,
+              },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          delhi: {
+            nameHi: "दिल्ली",
+            nameEn: "Delhi",
+            units: [
+              { id: "bigha", lh: "बीघा", le: "Bigha", toSqft: 14400 },
+              { id: "biswa", lh: "बिस्वा", le: "Biswa", toSqft: 720 },
+              { id: "biswansi", lh: "बिस्वांसी", le: "Biswansi", toSqft: 36 },
+              { id: "gaj", lh: "गज", le: "Gaj (Sq Yard)", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              { id: "sqmeter", lh: "वर्ग मीटर", le: "Sq Meter", toSqft: 10.764 },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          uttarakhand: {
+            nameHi: "उत्तराखंड",
+            nameEn: "Uttarakhand",
+            units: [
+              { id: "bigha", lh: "बीघा", le: "Bigha", toSqft: 6804 },
+              { id: "nali", lh: "नाली", le: "Nali", toSqft: 2160 },
+              { id: "mutthi", lh: "मुठ्ठी", le: "Mutthi", toSqft: 540 },
+              { id: "gaj", lh: "गज", le: "Gaj (Sq Yard)", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              { id: "sqmeter", lh: "वर्ग मीटर", le: "Sq Meter", toSqft: 10.764 },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          chhattisgarh: {
+            nameHi: "छत्तीसगढ़",
+            nameEn: "Chhattisgarh",
+            units: [
+              { id: "bigha", lh: "बीघा", le: "Bigha", toSqft: 14400 },
+              { id: "katha", lh: "कट्ठा", le: "Katha", toSqft: 720 },
+              { id: "dhur", lh: "धुर", le: "Dhur", toSqft: 36 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              { id: "sqmeter", lh: "वर्ग मीटर", le: "Sq Meter", toSqft: 10.764 },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+          goa: {
+            nameHi: "गोवा",
+            nameEn: "Goa",
+            units: [
+              { id: "cent", lh: "सेंट", le: "Cent", toSqft: 435.6 },
+              { id: "are", lh: "आर", le: "Are", toSqft: 1076.39 },
+              { id: "sqyard", lh: "वर्ग गज", le: "Sq Yard", toSqft: 9 },
+              { id: "acre", lh: "एकड़", le: "Acre", toSqft: 43560 },
+              { id: "hectare", lh: "हेक्टेयर", le: "Hectare", toSqft: 107639 },
+              { id: "sqmeter", lh: "वर्ग मीटर", le: "Sq Meter", toSqft: 10.764 },
+              { id: "sqft", lh: "वर्ग फुट", le: "Sq Ft", toSqft: 1 },
+            ],
+          },
+        };
+
+        // ── State list in desired order ─────────────────────────
+        var stateOrder = [
+          "up",
+          "delhi",
+          "uttarakhand",
+          "rajasthan",
+          "haryana",
+          "punjab",
+          "himachal",
+          "mp",
+          "chhattisgarh",
+          "bihar",
+          "jharkhand",
+          "west-bengal",
+          "assam",
+          "gujarat",
+          "maharashtra",
+          "goa",
+          "karnataka",
+          "tamil-nadu",
+          "kerala",
+          "andhra-pradesh",
+          "telangana",
+          "odisha",
+        ];
+
+        // ── State data lookup ──────────────────────────────────
+        function getState(id) {
+          return states[id];
+        }
+
+        // ── DOM refs ────────────────────────────────────────────
+        var stateSelect = document.getElementById("stateSelect");
+        var clearBtn = document.getElementById("clearBtn");
+        var inputsArea = document.getElementById("inputsArea");
+        var referenceArea = document.getElementById("referenceArea");
+        var currentStateId = null;
+        var isUpdating = false;
+
+        // ── Populate dropdown ──────────────────────────────────
+        stateOrder.forEach(function (id) {
+          var opt = document.createElement("option");
+          opt.value = id;
+          var s = states[id];
+          opt.textContent = s.nameHi + " / " + s.nameEn;
+          stateSelect.appendChild(opt);
+        });
+
+        // ── Build input fields ─────────────────────────────────
+        function renderInputs(stateId) {
+          var st = getState(stateId);
+          if (!st) {
+            inputsArea.innerHTML =
+              '<div class="empty-state"><h3>कोई राज्य चुना नहीं गया</h3>' +
+              "<p>कृपया ऊपर से अपना राज्य चुनें | Please select your state above</p></div>";
+            referenceArea.innerHTML = "";
+            return;
+          }
+
+          var units = st.units;
+          var html = '<div class="inputs-grid" id="inputsGrid">';
+          units.forEach(function (u, idx) {
+            var label = u.lh + " / " + u.le;
+            var sub = "";
+            html +=
+              '<div class="input-card">' +
+              '<label for="inp_' +
+              u.id +
+              '">' +
+              label +
+              "</label>" +
+              '<input type="number" step="any" id="inp_' +
+              u.id +
+              '" ' +
+              'data-idx="' +
+              idx +
+              '" placeholder="0" autocomplete="off">' +
+              "</div>";
+          });
+          html += "</div>";
+          inputsArea.innerHTML = html;
+
+          // Attach input events
+          units.forEach(function (u) {
+            var inp = document.getElementById("inp_" + u.id);
+            inp.addEventListener("input", function (e) {
+              onFieldChange(u.id);
+            });
+            inp.addEventListener("focus", function (e) {
+              this.select();
+            });
+          });
+        }
+
+        // ── When user types in a field ─────────────────────────
+        function onFieldChange(changedId) {
+          if (isUpdating) return;
+          var st = getState(currentStateId);
+          if (!st) return;
+          var units = st.units;
+          var changedUnit = null;
+          var changedIdx = -1;
+          units.forEach(function (u, i) {
+            if (u.id === changedId) {
+              changedUnit = u;
+              changedIdx = i;
+            }
+          });
+          if (!changedUnit) return;
+
+          var inp = document.getElementById("inp_" + changedId);
+          var raw = inp.value.trim();
+          if (raw === "") {
+            // Clear all other fields
+            isUpdating = true;
+            units.forEach(function (u) {
+              if (u.id !== changedId) {
+                document.getElementById("inp_" + u.id).value = "";
+              }
+            });
+            isUpdating = false;
+            return;
+          }
+          var num = parseFloat(raw);
+          if (isNaN(num)) return;
+          if (num < 0) { inp.value = ""; return; }
+
+          isUpdating = true;
+          var sqft = num * changedUnit.toSqft;
+          units.forEach(function (u) {
+            if (u.id === changedId) return;
+            var val = sqft / u.toSqft;
+            document.getElementById("inp_" + u.id).value = fmt(val);
+          });
+          isUpdating = false;
+        }
+
+        // ── Build reference table ──────────────────────────────
+        function renderReference(stateId) {
+          var st = getState(stateId);
+          if (!st) {
+            referenceArea.innerHTML = "";
+            return;
+          }
+          var units = st.units;
+          var n = units.length;
+          if (n === 0) {
+            referenceArea.innerHTML = "";
+            return;
+          }
+
+          var h =
+            '<div class="section-title">रूपांतरण तालिका / Conversion Reference</div>';
+          h +=
+            '<div class="ref-table-wrap"><table class="ref-table"><thead><tr><th></th>';
+          units.forEach(function (u) {
+            h +=
+              "<th>" +
+              u.lh +
+              '<br><span style="font-weight:400;font-size:0.78em">' +
+              u.le +
+              "</span></th>";
+          });
+          h += "</tr></thead><tbody>";
+
+          units.forEach(function (uRow, i) {
+            h +=
+              "<tr><th>1 " +
+              uRow.lh +
+              '<br><span style="font-weight:400;font-size:0.78em">' +
+              uRow.le +
+              "</span></th>";
+            units.forEach(function (uCol, j) {
+              if (i === j) {
+                h += "<td><strong>1</strong></td>";
+              } else {
+                var val = uRow.toSqft / uCol.toSqft;
+                h += "<td>" + fmtShort(val) + "</td>";
+              }
+            });
+            h += "</tr>";
+          });
+
+          h += "</tbody></table></div>";
+          referenceArea.innerHTML = h;
+        }
+
+        // ── Clear all inputs ───────────────────────────────────
+        function clearAll() {
+          if (!currentStateId) return;
+          var st = getState(currentStateId);
+          if (!st) return;
+          isUpdating = true;
+          st.units.forEach(function (u) {
+            var inp = document.getElementById("inp_" + u.id);
+            if (inp) inp.value = "";
+          });
+          isUpdating = false;
+        }
+
+        // ── Handle state change ────────────────────────────────
+        function onStateChange() {
+          var id = stateSelect.value;
+          currentStateId = id || null;
+          renderInputs(id);
+          renderReference(id);
+        }
+
+        // ── Event listeners ────────────────────────────────────
+        stateSelect.addEventListener("change", onStateChange);
+        clearBtn.addEventListener("click", clearAll);
+
+        // ── Init ────────────────────────────────────────────────
+        onStateChange();
+      })();
+    </script>
+  </body>
+</html>
