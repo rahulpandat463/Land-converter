@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rahulpandat463.github.io/Land-converter/sitemap.xml
