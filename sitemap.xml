@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://rahulpandat463.github.io/Land-converter/</loc>
-  <lastmod>2026-06-10T13:28:39+00:00</lastmod>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url><loc>https://rahulpandat463.github.io/Land-converter/</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/about.html</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/contact.html</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/privacy-policy.html</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/disclaimer.html</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/articles/</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/articles/bigha-to-gaj-up.html</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/articles/bigha-to-acre.html</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/articles/zameen-napne-ka-tarika.html</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/articles/bigha-rajasthan.html</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/articles/kanal-marla-converter.html</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/articles/hectare-to-bigha.html</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/articles/square-feet-to-bigha.html</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/articles/bigha-bihar-kattha.html</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/articles/land-registration-india.html</loc><lastmod>2026-06-10</lastmod></url>
+  <url><loc>https://rahulpandat463.github.io/Land-converter/articles/khasra-khatauni.html</loc><lastmod>2026-06-10</lastmod></url>
 </urlset>
