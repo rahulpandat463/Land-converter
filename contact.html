@@ -29,17 +29,15 @@
       .container{max-width:960px;margin:0 auto;padding:16px}
       .page-card{background:#fff;border-radius:12px;padding:32px;margin-bottom:24px;border:2px solid #e0ece4}
       .page-card h1{color:#2d6a4f;font-size:1.5rem;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid #e0ece4}
+      .page-card h2{color:#2d6a4f;font-size:1.15rem;margin:24px 0 12px}
       .page-card p{font-size:0.92rem;color:#2d4a3a;margin-bottom:12px;line-height:1.7}
-      .form-group{margin-bottom:16px}
-      .form-group label{display:block;font-size:0.9rem;color:#2d6a4f;font-weight:600;margin-bottom:4px}
-      .form-group input,.form-group textarea{width:100%;padding:10px 14px;border:2px solid #e0ece4;border-radius:8px;font-size:0.95rem;color:#1a3a2a;font-family:inherit;transition:border-color 0.2s}
-      .form-group input:focus,.form-group textarea:focus{border-color:#2d6a4f;outline:none}
-      .form-group textarea{min-height:120px;resize:vertical}
-      .btn{padding:12px 28px;border:none;border-radius:8px;font-size:1rem;cursor:pointer;font-weight:600;transition:background 0.2s}
-      .btn-primary{background:#2d6a4f;color:#fff}
-      .btn-primary:hover{background:#245a42}
-      .contact-info{background:#f0f7f2;border-radius:8px;padding:16px;margin-top:20px}
-      .contact-info p{margin-bottom:6px;font-size:0.9rem}
+      .page-card ul{margin:0 0 16px 20px}
+      .page-card li{font-size:0.92rem;color:#2d4a3a;margin-bottom:8px;line-height:1.6}
+      .contact-info{background:#f0f7f2;border-radius:8px;padding:20px;margin-top:12px;border:1px solid #dcefe2}
+      .contact-info p{margin-bottom:10px;font-size:0.95rem}
+      .contact-info a{color:#2d6a4f;font-weight:600}
+      .response-note{background:#fff8e6;border-left:4px solid #e0b23d;border-radius:6px;padding:14px 16px;margin-top:20px}
+      .response-note p{margin:0;font-size:0.88rem;color:#6b4f16}
       .ad-box{text-align:center;margin:10px auto;min-height:90px;background:#f0f0f0;display:flex;align-items:center;justify-content:center}
       .ad-box-250{min-height:250px}
       .ad-label{color:#999;font-size:0.75rem;text-align:center;display:block;padding:2px}
@@ -85,28 +83,24 @@
 
       <div class="page-card">
         <h1>संपर्क करें | Contact Us</h1>
-        <p>आपका स्वागत है! अगर आपके पास हमारे टूल, लेख या वेबसाइट के बारे में कोई सुझाव, प्रश्न या फीडबैक है, तो कृपया नीचे दिए गए फॉर्म के माध्यम से हमसे संपर्क करें। हम आपकी बात सुनने के लिए हमेशा तैयार हैं।</p>
-        <p>Welcome! If you have any suggestions, questions, or feedback about our tool, articles, or website, please contact us using the form below. We are always ready to listen.</p>
+        <p>आपका स्वागत है! अगर आपके पास हमारे टूल, लेख या वेबसाइट के बारे में कोई सुझाव, प्रश्न या फीडबैक है, तो हमें सीधे ईमेल पर लिखें। हम आपकी बात सुनने के लिए हमेशा तैयार हैं और हर संदेश का जवाब देने की पूरी कोशिश करते हैं।</p>
 
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="margin-top:20px">
-          <div class="form-group">
-            <label for="name">आपका नाम / Your Name *</label>
-            <input type="text" id="name" name="name" required placeholder="अपना नाम लिखें" />
-          </div>
-          <div class="form-group">
-            <label for="email">आपका ईमेल / Your Email *</label>
-            <input type="email" id="email" name="_replyto" required placeholder="your@email.com" />
-          </div>
-          <div class="form-group">
-            <label for="message">आपका संदेश / Your Message *</label>
-            <textarea id="message" name="message" required placeholder="अपना संदेश लिखें..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">संदेश भेजें / Send Message</button>
-        </form>
+        <h2>आप हमसे किन विषयों पर संपर्क कर सकते हैं?</h2>
+        <ul>
+          <li>किसी राज्य के भूमि मापन इकाई (बीघा, गज, एकड़, हेक्टेयर आदि) में कोई गलती या सुधार बताना</li>
+          <li>नए राज्य या नई इकाई को कैलकुलेटर में जोड़ने का सुझाव</li>
+          <li>वेबसाइट पर किसी तकनीकी समस्या की जानकारी देना</li>
+          <li>लेखों (Articles) के बारे में प्रश्न या फीडबैक</li>
+          <li>सामान्य सुझाव या साझेदारी से जुड़ी पूछताछ</li>
+        </ul>
 
         <div class="contact-info">
-          <p><strong>📧 ईमेल:</strong>landconverter@gmail.com</p>
-          <p><strong>🌐 वेबसाइट:</strong> <a href="https://rahulpandat463.github.io/Land-converter/" style="color:#2d6a4f">https://rahulpandat463.github.io/Land-converter/</a></p>
+          <p><strong>📧 ईमेल:</strong> <a href="mailto:landconverter@gmail.com">landconverter@gmail.com</a></p>
+          <p><strong>🌐 वेबसाइट:</strong> <a href="https://rahulpandat463.github.io/Land-converter/">https://rahulpandat463.github.io/Land-converter/</a></p>
+        </div>
+
+        <div class="response-note">
+          <p>ℹ️ हम आमतौर पर 2-3 कार्य दिवसों के भीतर ईमेल का जवाब देने की कोशिश करते हैं। कृपया अपने संदेश में जितना संभव हो उतना विवरण दें (जैसे कौन सा पेज, कौन सा राज्य, या स्क्रीनशॉट), ताकि हम आपकी बेहतर मदद कर सकें।</p>
         </div>
       </div>
 
